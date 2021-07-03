@@ -2,6 +2,7 @@ import './MainView.css';
 
 import React from 'react';
 import NavView from './NavView';
+import ContentView from './ContentView';
 
 class MainView extends React.Component {
 
@@ -14,13 +15,12 @@ class MainView extends React.Component {
   }
 
   render() {
+
+    //this must not return full html src
     return (
       <div className="MainView">
         <NavView />
-        <div className="container">
-          <br />
-          <p>Hanz Aquino</p>
-        </div>
+        <ContentView/>
       </div>
     );
   }

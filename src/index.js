@@ -1,10 +1,12 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import MainView from './MainView';
+
+import MainView from './Components/MainView';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
