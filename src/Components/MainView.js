@@ -20,7 +20,8 @@ class MainView extends React.Component {
     return (
       <div className="MainView">
         <NavView />
-        <ContentView/>
+        <br /><br /><br />
+        <ContentView />
       </div>
     );
   }

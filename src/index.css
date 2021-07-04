@@ -1,9 +1,10 @@
 body {
-	background-color: white;
   	margin: 0;
- 	 font-family: 'Roboto', 'Arial';
+ 	 font-family: 'Roboto', 'Arial', sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+	background-color: rgb(27,30,37);
+	color: white;
 }
 
 code {

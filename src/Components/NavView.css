@@ -1,0 +1,37 @@
+.H-Navbar {
+	backdrop-filter: blur(8px);
+	background: rgba(35,40,60,0.95);
+}
+.H-NvToggle {
+	background: rgba(35,40,60,0.95);
+	outline: none;
+	border: none;
+	color: white;
+}
+.H-NvToggle:focus,  .H-NvToggle:hover, .H-NvToggle:active  {
+	background: rgba(35,40,60,0.95);
+	outline: none;
+	border: none;
+	color: white;
+	outline-style: none;
+	box-shadow: none;
+}
+.H-NvBrand {
+	color: rgb(240, 250, 255);
+}
+.H-NvLink {
+	color: rgb(220, 230, 235);
+}
+.H-NvLink-head {
+	color: rgb(200, 220, 255);
+}
+
+
+
+
+/* bootstrap overwrite */
+.navbar-toggler , .navbar-toggler:hover , .navbar-toggler:focus,  .navbar-toggler:active{
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
