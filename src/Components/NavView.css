@@ -28,6 +28,38 @@
 
 
 
+@keyframes navCol1 {
+	from{
+		transform: translateX(-100px);
+	}
+	to {
+		transform: unset;
+	}
+}
+.navCol1 {
+	position: relative;
+	right: 0px;
+	animation: navCol1;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+}
+@keyframes navCol2 {
+	from{
+		transform: translateX(100px);
+	}
+	to {
+		transform: unset;
+	}
+}
+.navCol2 {
+	position: relative;
+	left: 0px;
+	animation: navCol2;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+}
+
+
 
 /* bootstrap overwrite */
 .navbar-toggler , .navbar-toggler:hover , .navbar-toggler:focus,  .navbar-toggler:active{

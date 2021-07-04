@@ -85,14 +85,14 @@ class ContentView extends React.Component {
           </Col>
 
           <Col md="6">
-            <p>
+            <span>
               <span><h2>Hi, I'm Hanz</h2></span>
               <br />
               <span>
                 I'm  a Computer Engineering student who enjoys converting ideas and creativity into a reliable, convenient, and user-friendly Software that can be utilized to aid your productivity.
               </span>
               <br /><br />
-            </p>
+            </span>
           </Col>
         </Row>
       </Container>

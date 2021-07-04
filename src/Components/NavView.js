@@ -93,7 +93,7 @@ class NavView extends React.Component {
         <Navbar className="H-Navbar" expand="xs" fixed="top">
           <Navbar.Brand href="#"><span className="H-NvBrand">&nbsp;&nbsp;<strong>{this.state.myName}</strong></span></Navbar.Brand>
           <span>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={this.toggleCliked}>
+            <Navbar.Toggle className="H-NvTogglebtn" aria-controls="basic-navbar-nav" onClick={this.toggleCliked}>
               <span className="H-NvToggle">
                 {toggleIcon}
               </span>
@@ -104,10 +104,10 @@ class NavView extends React.Component {
             <Container>
               <hr />
               <Row>
-                <Col align="center">
+                <Col className="navCol1" align="center">
                 {navColumns1}
                 </Col>
-                <Col align="center">
+                <Col className="navCol2" align="center">
                 {navColumns2}
                 </Col>
               </Row>
