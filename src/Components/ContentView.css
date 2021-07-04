@@ -2,6 +2,12 @@
 
 
 
+.H-CtnImgMe:hover {
+	transform: scale(102%);
+}
+
+
+
 .H-CtnSlogan {
 	color: rgb(250,80,80);
 	font-size: 20px;
@@ -9,3 +15,5 @@
 .H-CtnMSlogan {
 	font-size: 20px;
 }
+
+

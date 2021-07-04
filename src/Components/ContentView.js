@@ -20,8 +20,6 @@ class ContentView extends React.Component {
     this.AboutMe = this.AboutMe(this);
   }
 
-
-
   Header(){
     return(
       <Container>
@@ -61,7 +59,7 @@ class ContentView extends React.Component {
           <Col md="6">
             <Row className="d-flex align-items-center">
               <Col sm="4">
-                <span><img src="/img/pl-me/me.png" width="150" alt="me"/></span>
+                <span><img className="H-CtnImgMe" src="/img/pl-me/me.png" width="150" alt="me"/></span>
               </Col>
               <Col className="justify">
                 <p>
@@ -103,12 +101,12 @@ class ContentView extends React.Component {
         <Container>
           <Row>
             <Col xs="6" align="left">
-              <p>&#169; 2021</p>
+              <p> &#169; 2021</p>
             </Col>
 
             <Col xs="6" align="right">
               <p>
-                By: &nbsp; {this.state.myName}
+                By: &nbsp; {this.state.myName} &nbsp;
                 <i className="bi-heart-fill"></i>
                 &nbsp;
               </p>
