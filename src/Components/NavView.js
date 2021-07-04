@@ -18,6 +18,7 @@ class NavView extends React.Component {
     this.state = {
       myName : "Hanz Aquino",
       toggledDown: false,
+      testClick: null,
       Skills : {
         "Programming" : {
           "Web": "#web",
@@ -43,14 +44,17 @@ class NavView extends React.Component {
     };
 
     this.toggleCliked = this.toggleCliked.bind(this);
+    this.handleNavClick = this.handleNavClick.bind(this);
+  }
 
+  handleNavClick(event) {
+    this.setState({myName: event.target.name});
   }
 
   toggleCliked(){
     this.setState({
       toggledDown: !this.state.toggledDown,
     });
-
   }
 
   render() {
@@ -62,11 +66,11 @@ class NavView extends React.Component {
     var navColumns2 = [];
     for(var a in this.state.Skills){
       navItems = [];
-      navItems.push(<p className="H-NvLink-head"><b>{a}</b></p>);
+      navItems.push(<p key={a+"_a"} className="H-NvLink-head">{a}</p>);
       for(var b in this.state.Skills[a]){
-        navItems.push(<Nav.Link className="H-NvLink" href={this.state.Skills[a][b]}><span className="H-NvLink" >{b}</span></Nav.Link>);
+        navItems.push(<Nav.Link key={b+"_b"} name={b} onClick={this.handleNavClick} className="H-NvLink" href={this.state.Skills[a][b]}><span key={b+"_c"} className="H-NvLink" >{b}</span></Nav.Link>);
       }
-      navGroup.push(<><Nav className="mr-auto">{navItems}</Nav><hr /></>);
+      navGroup.push(<div key={a+"_d"}><Nav key={a+"_e"} className="mr-auto">{navItems}</Nav><hr key={a+"_f"}></hr></div>);
     }
     for (var i = 0; i < navGroup.length; i++) {
       if(i%2===0){
@@ -100,8 +104,12 @@ class NavView extends React.Component {
             <Container>
               <hr />
               <Row>
-                <Col align="center">{navColumns1}</Col>
-                <Col align="center">{navColumns2}</Col>
+                <Col align="center">
+                {navColumns1}
+                </Col>
+                <Col align="center">
+                {navColumns2}
+                </Col>
               </Row>
             </Container>
           </Navbar.Collapse>
