@@ -1,5 +1,7 @@
 .H-Navbar {
 	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+  	-moz-backdrop-filter: blur(8px);
 	background: rgba(35,40,60,0.95);
 }
 .H-NvToggle {
@@ -27,7 +29,7 @@
 }
 
 
-
+/* Navbar Animatinon*/
 @keyframes navCol1 {
 	from{
 		transform: translateX(-100px);
@@ -58,7 +60,7 @@
 	animation-duration: 0.5s;
 	animation-timing-function: ease;
 }
-
+/* Navbar Animatinon*/
 
 
 /* bootstrap overwrite */
@@ -67,3 +69,4 @@
 	outline: none;
 	box-shadow: none;
 }
+/* bootstrap overwrite */

@@ -1,4 +1,5 @@
 import React from 'react';
+import { InView } from 'react-intersection-observer';
 import {
   Container,
   Row,
@@ -6,6 +7,7 @@ import {
   Image,
 } from 'react-bootstrap';
 import './ContentView.css';
+
 
 class ContentView extends React.Component {
 
@@ -22,7 +24,6 @@ class ContentView extends React.Component {
   }
 
 
-
   Header(){
     return(
       <Container>
@@ -33,7 +34,12 @@ class ContentView extends React.Component {
               <Col md="6" align="center" >
                 <Image src="/img/logo/hz.png"  fluid></Image>
                 <br /><br />
-                <p className="H-CtnMSlogan" >A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
+                <InView rootMargin='-50px 0px' triggerOnce>
+                  {({ inView, ref, entry }) => (
+                    <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  >A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
+                  )}
+                </InView>
+               
               </Col>
           </Row>
       </Container>
@@ -67,7 +73,13 @@ class ContentView extends React.Component {
           <Col md="6">
             <Row className="d-flex align-items-center">
               <Col sm="4">
-                <span><img className="H-CtnImgMe" src="/img/pl-me/me.png" width="150" alt="me"/></span>
+                <InView rootMargin='-100px 0px'>
+                  {({ inView, ref, entry }) => (
+                    <div ref={ref}>
+                      <span><img className={inView ? "H-CtnImgMe-shw":"H-CtnImgMe-hid"} src="/img/pl-me/me.png" width="150" alt="me"/></span>
+                    </div>
+                  )}
+                  </InView>
               </Col>
               <Col className="justify">
                 <p>
@@ -135,6 +147,15 @@ class ContentView extends React.Component {
         <br /><br /><br />
         <br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <Container>
+        <InView rootMargin='-200px 0px' triggerOnce>
+          {({ inView, ref, entry }) => (
+            <div ref={ref}>
+              {inView ? (<div>Viewed</div>):(<div>Not viewed</div>)}
+            </div>
+          )}
+        </InView>
+        </Container>
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
         <hr />
