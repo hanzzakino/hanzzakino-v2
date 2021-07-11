@@ -5,64 +5,16 @@
 	transform: scale(102%);
 }
 
-
 .H-CtnSlogan {
 	color: rgb(250,80,80);
 	font-size: 20px;
 }
 
-
-
-
-
-
-
-
-
 .H-CtnImgMe:hover {
 	transform: scale(102%);
 }
-.H-CtnImgMe {
-	opacity: 0%;
-}
-@keyframes CtnImgMeAnim {
-	from{
-		opacity: 0%;
-		transform: translateX(-200px);
-	}
-	to {
-		opacity: 100%;
-		transform: unset;
-	}
-}
-.H-CtnImgMeAnim {
-	opacity: 100%;
-	font-size: 20px;
-	animation: CtnImgMeAnim;
-	animation-duration: 1s;
-	animation-timing-function: ease;
-}
-
-
-
 
 .H-CtnMSlogan {
 	font-size: 20px;
-	opacity: 0%;
-}
-@keyframes CtnMSloganAnim {
-	from{
-		opacity: 0%;
-		transform: translateY(200px);
-	}
-	to {
-		opacity: 100%;
-		transform: unset;
-	}
-}
-.H-CtnMSloganAnim {
-	opacity: 100%;
-	font-size: 20px;
-	animation: CtnMSloganAnim;
-	animation-duration: 1s;
+
 }

@@ -21,29 +21,29 @@ class ContentView extends React.Component {
     this.Content = this.Content(this);
   }
 
+
+
   Header(){
     return(
       <Container>
           <Row className="d-flex align-items-center">
-              <Col md="6" align="center" id="idH-head1">
+              <Col md="6" align="center">
                 <Image src="/img/logo/logo2.png" fluid></Image>
               </Col>
               <Col md="6" align="center" >
-                <Image src="/img/logo/hz.png" id="idH-head2"  fluid></Image>
+                <Image src="/img/logo/hz.png"  fluid></Image>
                 <br /><br />
-                <p className="H-CtnMSlogan" id="idH-CtnMSlogan">A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
+                <p className="H-CtnMSlogan" >A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
               </Col>
           </Row>
       </Container>
     );
   }
-
-
   Content(){
+
+
     console.log("Content");
   }
-
-
   AboutMe(){
     var hFbLogo = {
       color: "#1877f2",
@@ -67,7 +67,7 @@ class ContentView extends React.Component {
           <Col md="6">
             <Row className="d-flex align-items-center">
               <Col sm="4">
-                <span><img className="H-CtnImgMe" id="idH-CtnImgMe" src="/img/pl-me/me.png" width="150" alt="me"/></span>
+                <span><img className="H-CtnImgMe" src="/img/pl-me/me.png" width="150" alt="me"/></span>
               </Col>
               <Col className="justify">
                 <p>
@@ -130,7 +130,7 @@ class ContentView extends React.Component {
     return (
       <div>
         {this.Header}
-        <div id="H-Ctn1">
+        <div>
         <br /><br /><br />
         <br /><br /><br />
         <br /><br /><br />
