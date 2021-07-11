@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+}
 body {
   	margin: 0;
  	 font-family: 'Roboto', 'Arial', sans-serif;
@@ -6,7 +9,6 @@ body {
 	background-color: rgb(27,30,37);
 	color: white;
 }
-
 code {
   	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -18,7 +18,7 @@ class MainView extends React.Component {
 
     //this must not return full html src
     return (
-      <div className="MainView">
+      <div className="MainView" id="idH-MainView">
         <NavView />
         <br /><br />
         <ContentView />

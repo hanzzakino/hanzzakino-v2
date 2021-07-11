@@ -48,7 +48,7 @@ class NavView extends React.Component {
   }
 
   handleNavClick(event) {
-    this.setState({myName: event.target.name});
+    console.log(event.target.name);
   }
 
   toggleCliked(){
