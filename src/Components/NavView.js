@@ -1,14 +1,6 @@
 
 import React from 'react';
 
-import {
-  Container,
-  Row,
-  Col,
-  Navbar,
-  Nav,
-} from 'react-bootstrap';
-
 import './NavView.css';
 
 class NavView extends React.Component {
@@ -16,9 +8,13 @@ class NavView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      myName : "Hanz Aquino",
+      myName : "HNZ",
       toggledDown: false,
       testClick: null,
+      onPageTop: true,
+      scrollingToTop: false,
+      scrollTopPX: 0,
+      scrollTopPT: 0,
       Skills : {
         "Programming" : {
           "Web": "#web",
@@ -49,7 +45,9 @@ class NavView extends React.Component {
 
   handleNavClick(event) {
     console.log(event.target.name);
+    this.toggleCliked();
   }
+
 
   toggleCliked(){
     this.setState({
@@ -57,21 +55,57 @@ class NavView extends React.Component {
     });
   }
 
-  render() {
+  //handling general scroll event
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenToScroll)
+  }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenToScroll)
+  }
+
+  listenToScroll = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop
+
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+
+    const scrolled = winScroll / height
+
+    this.setState({
+      scrollTopPX: winScroll,
+      scrollTopPT: scrolled,
+    })
+
+    if( this.state.scrollTopPX  < 5 ){
+      this.setState({onPageTop : true});
+    } else {
+      this.setState({onPageTop : false});
+    }
+  }
+  //handling general scroll event
+
+
+
+  render() {
     //Navbar Items
     var navItems = null;
     var navGroup = [];
     var navColumns1 = [];
     var navColumns2 = [];
+
+
     for(var a in this.state.Skills){
       navItems = [];
       navItems.push(<p key={a+"_a"} className="H-NvLink-head">{a}</p>);
       for(var b in this.state.Skills[a]){
-        navItems.push(<Nav.Link key={b+"_b"} name={b} onClick={this.handleNavClick} className="H-NvLink" href={this.state.Skills[a][b]}><span key={b+"_c"} className="H-NvLink" >{b}</span></Nav.Link>);
+        navItems.push(<a key={b+"_b"} name={b} onClick={this.handleNavClick} className="hz-nvlink" href={this.state.Skills[a][b]}><span key={b+"_c"} className="H-NvLink" >{b}</span></a>);
       }
-      navGroup.push(<div key={a+"_d"}><Nav key={a+"_e"} className="mr-auto">{navItems}</Nav><hr key={a+"_f"}></hr></div>);
+      navGroup.push(<div key={a+"_d"}><div className="hz-navbar-list" key={a+"_e"}>{navItems}</div><hr style={{opacity : "10%"}} key={a+"_f"}></hr></div>);
     }
+
     for (var i = 0; i < navGroup.length; i++) {
       if(i%2===0){
         navColumns1.push(navGroup[i]);
@@ -80,40 +114,43 @@ class NavView extends React.Component {
       }
     }
 
+
+
     //toggle
-    var toggleIcon = null;
-    if(this.state.toggledDown){
-      toggleIcon = <i className="bi-chevron-up"></i>
-    } else {
-      toggleIcon = <i className="bi-chevron-down"></i>;
-    }
 
     return (
       <div>
-        <Navbar className="H-Navbar" expand="xs" fixed="top">
-          <Navbar.Brand href="#"><span className="H-NvBrand">&nbsp;&nbsp;<strong>{this.state.myName}</strong></span></Navbar.Brand>
-          <span>
-            <Navbar.Toggle className="H-NvTogglebtn" aria-controls="basic-navbar-nav" onClick={this.toggleCliked}>
-              <span className="H-NvToggle">
-                {toggleIcon}
-              </span>
-            </Navbar.Toggle>
-            &nbsp;
-          </span>
-          <Navbar.Collapse>
-            <Container>
-              <hr />
-              <Row>
-                <Col className="navCol1" align="center">
-                {navColumns1}
-                </Col>
-                <Col className="navCol2" align="center">
-                {navColumns2}
-                </Col>
-              </Row>
-            </Container>
-          </Navbar.Collapse>
-        </Navbar>
+
+
+        <div className="hz-row-unresponsive">
+          <div className="hz-column">
+            <h2 className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}>{this.state.myName}</h2>
+          </div>
+          <div className="hz-column">
+          <button className="hz-navbar-toggle H-NvToggle" onClick={this.toggleCliked}>
+            <span>
+              <div className={this.state.toggledDown ? "H-chevron-animated":""}><span className="bi-chevron-down"></span></div>
+            </span>
+          </button>
+          </div>
+          &nbsp;
+        </div>
+
+
+        <div className="hz-navbar H-Navbar" id="hzNavBar" style={this.state.toggledDown ? {height: "100%"}:{height: (this.state.onPageTop||this.state.scrollingToTop ? "0%":"48px")}}>
+
+          <div className="hz-navbar-collapse">
+            <div className={this.state.toggledDown ? "hz-column navCol1":"hz-column"} align="center">
+              {navColumns1}
+            </div>
+            <div className={this.state.toggledDown ? "hz-column navCol2":"hz-column"} align="center">
+              {navColumns2}
+            </div>  
+          </div>
+
+        </div>
+
+
       </div>
     );
   }

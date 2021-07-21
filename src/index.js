@@ -1,6 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import './Assets/css/hz-ui-framework.css';
+import './Assets/js/hz-ui-framework.js';
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import './index.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';

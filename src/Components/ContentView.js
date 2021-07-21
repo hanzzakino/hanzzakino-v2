@@ -4,9 +4,9 @@ import {
   Container,
   Row,
   Col,
-  Image,
 } from 'react-bootstrap';
 import './ContentView.css';
+import headerBackground from '../Assets/img/hz-header-bg.jpg'
 
 
 class ContentView extends React.Component {
@@ -16,6 +16,7 @@ class ContentView extends React.Component {
     this.state = {
       myName : "Hanz Aquino",
       myFullName : "Hanz Christian C. Aquino",
+      activeDiv : "",
     };
     this.Footer = this.Footer(this);
     this.Header = this.Header(this);
@@ -25,14 +26,24 @@ class ContentView extends React.Component {
 
 
   Header(){
+    const headerBackgroundStyle= {
+      backgroundImage : "url("+headerBackground+")",
+      backgroundPosition: "bottom",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+      backgroundBlendMode: "overlay",
+      marginTop: "-58px",
+      height: "90vh",
+    };
     return(
-      <Container>
+      <div style={headerBackgroundStyle}>
+          <br /><br /><br />
           <Row className="d-flex align-items-center">
               <Col md="6" align="center">
-                <Image src="/img/logo/logo2.png" fluid></Image>
+                
               </Col>
               <Col md="6" align="center" >
-                <Image src="/img/logo/hz.png"  fluid></Image>
+                
                 <br /><br />
                 <InView rootMargin='-50px 0px' triggerOnce>
                   {({ inView, ref, entry }) => (
@@ -42,7 +53,7 @@ class ContentView extends React.Component {
                
               </Col>
           </Row>
-      </Container>
+      </div>
     );
   }
   Content(){
@@ -148,7 +159,7 @@ class ContentView extends React.Component {
         <br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
         <Container>
-        <InView rootMargin='-200px 0px' triggerOnce>
+        <InView rootMargin='-200px 0px'>
           {({ inView, ref, entry }) => (
             <div ref={ref}>
               {inView ? (<div>Viewed</div>):(<div>Not viewed</div>)}
