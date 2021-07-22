@@ -4,11 +4,10 @@ import {
   Container,
   Row,
   Col,
-  Overlay,
 } from 'react-bootstrap';
 import './ContentView.css';
 import headerBackground from '../Assets/img/hz-header-bg.jpg'
-
+import myImage from '../Assets/img/hz-me.png'
 
 class ContentView extends React.Component {
 
@@ -23,13 +22,6 @@ class ContentView extends React.Component {
     this.Header = this.Header(this);
     this.AboutMe = this.AboutMe(this);
     this.Content = this.Content(this);
-
-    this.scrollToContent = this.scrollToContent(this);
-  }
-
-  scrollToContent(){
-    const content1 = document.getElementById("content-1");
-    if(content1)content1.scrollIntoView({ behavior: 'smooth' , block: "start"});
   }
 
   componentDidMount() {
@@ -76,8 +68,6 @@ class ContentView extends React.Component {
                 
               </Col>
               <Col md="6" align="center" >
-                
-                <br /><br />
                 <InView rootMargin='-50px 0px' triggerOnce>
                   {({ inView, ref, entry }) => (
                     <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  >A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
@@ -96,7 +86,11 @@ class ContentView extends React.Component {
       <div className="hz-row" align="center">
         <div className="hz-column">
           <br />
-            <button onClick={this.scrollToContent} className="hz-transparent"><span className="bi-chevron-down hz-cv-scrolldowncehvron"></span></button>
+            <button onClick={() => {
+              const content1 = document.getElementById("content-1");
+              if(content1)content1.scrollIntoView({ behavior: 'smooth' , block: "start"});
+            }} 
+            className="hz-transparent"><span className="bi-chevron-down hz-cv-scrolldowncehvron"></span></button>
         </div>
       </div>
       <div className="hz-container" id="content-1">
@@ -136,32 +130,32 @@ class ContentView extends React.Component {
       color: "white",
     };
     var hCourse = {
-      fontSize: "14px"
+      fontSize: "13px",
+      opacity: "60%",
     }
 
     return(
-      <Container>
-        <Row>
-          <Col md="6">
-            <Row className="d-flex align-items-center">
-              <Col sm="4">
+      <div className="hz-container">
+        <div className="hz-row">
+          <div className="hz-column">
+            <div className="hz-row hz-fullcentered">
+              <div className="hz-column">
                 <InView rootMargin='-100px 0px'>
                   {({ inView, ref, entry }) => (
                     <div ref={ref}>
-                      <span><img className={inView ? "H-CtnImgMe-shw":"H-CtnImgMe-hid"} src="/img/pl-me/me.png" width="150" alt="me"/></span>
+                      <span><img className={inView ? "H-CtnImgMe-shw":"H-CtnImgMe-hid"} src={myImage} width="150" alt="me"/></span>
                     </div>
                   )}
                   </InView>
-              </Col>
-              <Col className="justify">
+              </div>
+              <div className="hz-column">
                 <p>
-                  <br />
                   <b>{this.state.myFullName}</b>
                   <br />
                   <span style={hCourse}>
                   BS in Computer Engineering
                   <br />
-                  <i>Creator</i>
+                  <i >Creator</i>
                   <br />
                   <a href="https://facebook.com/hanzz.akino" ><i style={hFbLogo} className="bi-facebook"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
                   <a className="" href="https://twitter.com/HanzzAquino" ><i style={hTwLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
@@ -169,12 +163,12 @@ class ContentView extends React.Component {
                   <a href="mailto:emperornezl50@gmail.com" ><i style={hMlLogo} className="bi-envelope-fill"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
                   </span>
                 </p>
-              </Col>
-            </Row>
+              </div>
+            </div>
             <br />
-          </Col>
+          </div>
 
-          <Col md="6">
+          <div className="hz-column">
             <span>
               <span><h2>Hi, I'm Hanz</h2></span>
               <br />
@@ -183,28 +177,30 @@ class ContentView extends React.Component {
               </span>
               <br /><br />
             </span>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
     );
   }
   Footer(){
     return(
-        <Container>
-          <Row>
-            <Col xs="6" align="left">
-              <p> &#169; 2021</p>
-            </Col>
+      <div className="hz-container">
 
-            <Col xs="6" align="right">
+          <div className="hz-unresponsive">
+            <div className="hz-column" align="left">
+              <p> &#169; 2021</p>
+            </div>
+
+            <div className="hz-column" align="right">
               <p>
                 By: &nbsp; {this.state.myName} &nbsp;
                 <i className="bi-heart-fill"></i>
                 &nbsp;
               </p>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </div>
+
+      </div>
       );
   }
 

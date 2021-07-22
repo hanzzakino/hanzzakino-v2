@@ -123,6 +123,7 @@ class NavView extends React.Component {
 
 
         <div className="hz-row-unresponsive">
+        
           <div className="hz-column">
             <h2 className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}>{this.state.myName}</h2>
           </div>

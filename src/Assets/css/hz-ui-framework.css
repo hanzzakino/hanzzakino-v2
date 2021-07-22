@@ -30,7 +30,7 @@ code {
 }
 
 .hz-row {
-  display: flex;
+  	display: flex;
 }
 
 .hz-row-unresponsive {
@@ -38,7 +38,7 @@ code {
 }
 
 .hz-column {
-  flex: 50%;
+  	flex: 50%;
 }
 
 @media (max-width: 600px) {
@@ -90,7 +90,7 @@ code {
 	background-color: transparent;
 	position: fixed; /* Stay in place */
 	margin-top: 11px;
-	margin-left: 25px;
+	left: 25px;
 	z-index: 2;
 	transition: 0.5s;
 }
@@ -100,7 +100,7 @@ code {
 	background-color: transparent;
 	position: fixed; /* Stay in place */
 	margin-top: 10px;
-	margin-left: 25px;
+	left: 25px;
 	z-index: 2;
 	transition: 0.5s;
 }
@@ -147,5 +147,9 @@ code {
 	background-color: transparent;
 	border-style: none;
 	outline-style: none;
+}	
+.hz-unresponsive {
+	display: flex;
+    flex-direction: none;
 }
 /* Additional Attributes */
