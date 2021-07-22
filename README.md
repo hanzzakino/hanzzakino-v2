@@ -1,5 +1,5 @@
 # Hanz Aquino
-## web Portfolio
+## Web Portfolio
 
 ### Project Started: 02-07-2021
 
