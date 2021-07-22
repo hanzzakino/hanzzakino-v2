@@ -8,7 +8,7 @@ class NavView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      myName : "HNZ",
+      myName : "HANZ",
       toggledDown: false,
       testClick: null,
       onPageTop: true,
@@ -16,25 +16,25 @@ class NavView extends React.Component {
       scrollTopPX: 0,
       scrollTopPT: 0,
       Skills : {
-        "Programming" : {
-          "Web": "#web",
-          "Desktop": "#desktop",
-          "Math and Algorithms": "#mathnalgo",
+        "PROGRAMMING" : {
+          "WEB": "#web",
+          "DESKTOP": "#desktop",
+          "ALGORITHMS": "#mathnalgo",
         },
-        "Computer Graphics" : {
-          "2D Arts": "#2d",
-          "3D Arts": "#3d",
-          "Designs": "#design",
+        "COMPUTER GRAPHICS" : {
+          "2D ARTS": "#2d",
+          "3D ARTS": "#3d",
+          "DESIGNS": "#design",
         },
-        "Mathematics" : {
-          "Physics": "#physics",
-          "Geometry": "#geometry",
-          "Math": "#math",
+        "MATHEMATICS" : {
+          "PHYSICS": "#physics",
+          "GEOMETRY": "#geometry",
+          "MATH": "#math",
         },
-        "Engineering" : {
-          "Circuit Design": "#circuits",
-          "Logic Design" : "#logic",
-          "Research": "#research",
+        "ENGINEERING" : {
+          "CIRCUIT DESIGN": "#circuits",
+          "LOGIC DESIGN" : "#logic",
+          "RESEARCH": "#research",
         },
       }
     };

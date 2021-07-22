@@ -11,6 +11,16 @@
 	font-size: 20px;
 }
 
+.hz-cv-scrolldowncehvron {
+	color: whitesmoke;
+	font-size: 4vh;
+	transition: 0.2s;
+}
+.hz-cv-scrolldowncehvron:hover {
+	color: whitesmoke;
+	font-size: 5vh;
+	transition: 0.2s;
+}
 
 
 /* About Me Image */
