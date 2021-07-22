@@ -25,7 +25,8 @@ code {
 
 /* GRID SYSTEM */
 .hz-container {
-	margin: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .hz-row {
@@ -41,7 +42,11 @@ code {
 }
 
 @media (max-width: 600px) {
-  .hz-row {
+	.hz-container {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+  	.hz-row {
   		display: flex;
         flex-direction: column;
 	}
@@ -137,5 +142,10 @@ code {
 .hz-fullcentered {
 	display: flex !important;
 	align-items: center !important;
+}
+.hz-transparent {
+	background-color: transparent;
+	border-style: none;
+	outline-style: none;
 }
 /* Additional Attributes */
