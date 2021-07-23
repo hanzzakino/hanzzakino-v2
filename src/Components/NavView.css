@@ -27,22 +27,6 @@
 }
 
 
-
-@keyframes chevronAnimated {
-	from{
-		transform: rotateX(0deg);
-	}
-	to {
-		transform: rotateX(180deg);
-	}
-}
-.H-chevron-animated {
-	transform: rotateX(180deg);
-	animation: chevronAnimated;
-	animation-duration: 0.6s;
-}
-
-
 /* Navbar Animatinon*/
 @keyframes navCol1 {
 	from{

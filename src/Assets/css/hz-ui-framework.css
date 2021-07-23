@@ -124,6 +124,18 @@ code {
 	right: 25px;
 	z-index: 2;
 }
+.hz-navbar-toggle:hover {
+	transform: scale(1.1);
+	transition: 0.2s;
+}
+.hz-navbar-chevron-animated {
+	transform: rotateX(180deg);
+	transition: 0.6s;
+}
+.hz-navbar-chevron {
+	transform: rotateX(0deg);
+	transition: 0.6s;
+}
 
 @media (max-width: 600px) {
   .hz-navbar-collapse {
@@ -131,6 +143,12 @@ code {
   		display: flex;
         flex-direction: column;
         margin-top: 55px;
+	}
+	.hz-navbar-brand , .hz-navbar-brand-topped {
+		left: 10px;
+	}
+	.hz-navbar-toggle {
+		right: 5px;
 	}
 }
 /* NAV */

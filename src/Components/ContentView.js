@@ -1,10 +1,5 @@
 import React from 'react';
 import { InView } from 'react-intersection-observer';
-import {
-  Container,
-  Row,
-  Col,
-} from 'react-bootstrap';
 import './ContentView.css';
 import headerBackground from '../Assets/img/hz-header-bg.jpg'
 import myImage from '../Assets/img/hz-me.png'
@@ -52,7 +47,7 @@ class ContentView extends React.Component {
   Header(){
     const headerBackgroundStyle= {
       backgroundImage : "url("+headerBackground+")",
-      backgroundColor : "rgb(57,60,67)",
+      backgroundColor : "rgb(37,40,47)",
       backgroundBlendMode: "overlay",
       backgroundPosition: "bottom",
       backgroundRepeat: "no-repeat",
@@ -63,19 +58,15 @@ class ContentView extends React.Component {
     return(
       <div style={headerBackgroundStyle}>
           <br /><br /><br />
-          <Row className="d-flex align-items-center">
-              <Col md="6" align="center">
-                
-              </Col>
-              <Col md="6" align="center" >
+          <div className="hz-row hz-fullcentered">
+              <div className="hz-column" align="center" >
                 <InView rootMargin='-50px 0px' triggerOnce>
                   {({ inView, ref, entry }) => (
                     <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  >A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
                   )}
                 </InView>
-               
-              </Col>
-          </Row>
+              </div>
+          </div>
       </div>
     );
   }
@@ -216,7 +207,7 @@ class ContentView extends React.Component {
         <br /><br /><br />
         <br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <Container>
+        <div>
         <InView rootMargin='-200px 0px'>
           {({ inView, ref, entry }) => (
             <div ref={ref}>
@@ -224,7 +215,7 @@ class ContentView extends React.Component {
             </div>
           )}
         </InView>
-        </Container>
+        </div>
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br />
         <hr />
