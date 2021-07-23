@@ -123,13 +123,14 @@ class NavView extends React.Component {
 
 
         <div className="hz-row-unresponsive">
+        
           <div className="hz-column">
             <h2 className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}>{this.state.myName}</h2>
           </div>
           <div className="hz-column">
           <button className="hz-navbar-toggle H-NvToggle" onClick={this.toggleCliked}>
             <span>
-              <div className={this.state.toggledDown ? "H-chevron-animated":""}><span className="bi-chevron-down"></span></div>
+              <div className={this.state.toggledDown ? "hz-navbar-chevron-animated":"hz-navbar-chevron"}><span className="bi-chevron-down"></span></div>
             </span>
           </button>
           </div>

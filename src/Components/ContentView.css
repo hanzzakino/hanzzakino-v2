@@ -4,8 +4,9 @@
 .H-CtnImgMe:hover {
 	transform: scale(102%);
 }
-
-
+.H-img-mynamedesign{
+	width: 90%;
+}
 .H-CtnSlogan {
 	color: rgb(250,80,80);
 	font-size: 20px;
@@ -24,49 +25,29 @@
 
 
 /* About Me Image */
-@keyframes CtnImgMe {
-	from {
-		visibility: hidden;
-		transform: translateX(-100px);
-	}
-	to {
-		visibility: visible;
-		transform: unset;
-	}
-}
 .H-CtnImgMe-hid {
 	visibility: hidden;
+	transform: translateX(-100px);
 }
 .H-CtnImgMe-shw {
 	visibility: visible;
-	animation: CtnImgMe;
-	animation-duration: 1s;
-	animation-timing-function: ease;
+	transform: unset;
+	transition: 1s;
 }
 /******************/
 
 
 
 /* Header motto */
-@keyframes CtnMSlogan {
-	from {
-		visibility: hidden;
-		transform: translateY(100px);
-	}
-	to {
-		visibility: visible;
-		transform: unset;
-	}
-}
 .H-CtnMSlogan-hid {
 	visibility: hidden;
+	transform: translateY(100px);
 	font-size: 20px;
 }
 .H-CtnMSlogan-shw {
 	font-size: 20px;
 	visibility: visible;
-	animation: CtnMSlogan;
-	animation-duration: 1.5s;
-	animation-timing-function: ease;
+	transform: unset;
+	transition: 1.5s;
 }
 /******************/
