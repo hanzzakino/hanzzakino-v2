@@ -82,12 +82,28 @@ class ContentView extends React.Component {
               if(content1)content1.scrollIntoView({ behavior: 'smooth' , block: "start"});
             }} 
             className="hz-transparent"><span className="bi-chevron-down hz-cv-scrolldowncehvron"></span></button>
+
         </div>
       </div>
+       <br /> <br />
+
+       
+
       <div className="hz-container" id="content-1">
-        <div className="hz-row" align="center">
+        <br /> <br /><br />
+        <div className="hz-row">
           <div className="hz-column">
-            <br /><br /><br />
+
+            <div className="hz-row-unresponsive hz-card">
+              <div className="hz-column-fit">
+                <p style={{fontSize: "2.45rem",color: "rgb(250,80,80)", margin: "0.6875rem  0.3125rem 0px 0px"}}>Art</p>
+              </div>
+              <div className="hz-column-fit">
+                <p style={{fontFamily: "Roboto light", fontSize: "1rem"}}>of</p>
+                <p style={{marginTop: "-1.2rem"}}>Programming</p>
+              </div>
+            </div> 
+            
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet erat convallis, ultricies diam ultrices, lacinia purus. In dictum lectus eu massa interdum tempor. Curabitur dictum rhoncus ligula eu vehicula. Sed fringilla blandit lorem nec scelerisque. Pellentesque malesuada ipsum in orci lobortis, et ullamcorper quam interdum. Fusce volutpat, mauris et convallis maximus, odio massa interdum dui, ut tempus tellus arcu ut velit. Aenean placerat et purus id semper. Ut interdum eleifend pellentesque. Aenean ac malesuada augue. Mauris tempus ex vitae ante interdum, id sodales ipsum congue.
   <br /> <br />
@@ -102,6 +118,7 @@ class ContentView extends React.Component {
           </div>
         </div>
       </div>
+
 
 
 

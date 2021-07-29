@@ -1,3 +1,6 @@
+
+
+
 /* HTML */
 html {
 	font-size: 16px;
@@ -7,7 +10,7 @@ body {
  	 font-family:  'Roboto', 'Arial', sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
-	background-color: rgb(27,30,37);
+	background-color: rgb(14,16,19);
 	color: white;
 }
 code {
@@ -40,7 +43,13 @@ code {
 .hz-column {
   	flex: 50%;
 }
+.hz-column-fit {
+  	width: fit-content;
+  	margin: 0;
+  	padding: 0;
+}
 
+/* If screen width is less than 600px */
 @media (max-width: 600px) {
 	.hz-container {
 		margin-left: 10px;
@@ -93,6 +102,8 @@ code {
 	left: 25px;
 	z-index: 2;
 	transition: 0.5s;
+	text-decoration: none;
+	font-weight: bolder;
 }
 .hz-navbar-brand-topped {
 	font-size: 1.5625rem;
@@ -103,6 +114,8 @@ code {
 	left: 25px;
 	z-index: 2;
 	transition: 0.5s;
+	text-decoration: none;
+	font-weight: bolder;
 }
 .hz-nvlink {
 	text-decoration: none;
@@ -136,7 +149,26 @@ code {
 	transform: rotateX(0deg);
 	transition: 0.6s;
 }
+.hz-navbar-contactme {
+	text-decoration: none;
+	color: rgb(230, 240, 255);
+	font-size: 1rem;
+	position: fixed; /* Stay in place */
+	margin-top: 15px;
+	right: 90px;
+	z-index: 2;
+}
+.hz-navbar-resume {
+	text-decoration: none;
+	color: rgb(230, 240, 255);
+	font-size: 1rem;
+	position: fixed; /* Stay in place */
+	margin-top: 15px;
+	right: 185px;
+	z-index: 2;
+}
 
+/* if width less than 600px */
 @media (max-width: 600px) {
   .hz-navbar-collapse {
   		font-size: 2.5vh;
@@ -149,6 +181,18 @@ code {
 	}
 	.hz-navbar-toggle {
 		right: 5px;
+	}
+	.hz-navbar-contactme {
+		width: 20px;
+		height: 20px;
+		overflow: hidden;
+		right: 50px;
+	}
+	.hz-navbar-resume {
+		width: 20px;
+		height: 20px;
+		overflow: hidden;
+		right: 90px;
 	}
 }
 /* NAV */
@@ -170,4 +214,42 @@ code {
 	display: flex;
     flex-direction: none;
 }
+
+
+/* * Attributes */
+.hz-card {
+	border-radius: 15px;
+	padding: 10px 25px 10px 25px;
+	background-color: rgba(255,255,255,0.8);
+	color: rgb(4,6,9);
+	overflow: hidden;
+}
+.hz-card p {
+	font-family: "Roboto";
+	font-size: 1.15rem;
+}
 /* Additional Attributes */
+
+
+
+
+
+
+/* Animatinon Attributes */
+@keyframes hz-slideToRight {
+	from{
+		transform: translateX(-100px);
+	}
+	to {
+		transform: unset;
+	}
+}
+@keyframes hz-slideToLeft {
+	from{
+		transform: translateX(100px);
+	}
+	to {
+		transform: unset;
+	}
+}
+/* Animatinon Attributes */

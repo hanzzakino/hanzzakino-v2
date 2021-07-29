@@ -8,6 +8,7 @@ class NavView extends React.Component {
     super(props);
     this.state = {
       myName : "HANZ",
+      myFullName : "HANZ AQUINO",
       toggledDown: false,
       testClick: null,
       onPageTop: true,
@@ -124,9 +125,11 @@ class NavView extends React.Component {
         <div className="hz-row-unresponsive">
         
           <div className="hz-column">
-            <h2 className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}>{this.state.myName}</h2>
+            <a href="#home" className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}>{this.state.myName}</a>
           </div>
           <div className="hz-column">
+          <a href="#contactme" className="hz-navbar-contactme"><i className="bi-telephone" /> Contact</a>
+          <a href="#resume" className="hz-navbar-resume"><i className="bi-person" /> &nbsp;Resume</a>
           <button className="hz-navbar-toggle H-NvToggle" onClick={this.toggleCliked}>
             <span>
               <div className={this.state.toggledDown ? "hz-navbar-chevron-animated":"hz-navbar-chevron"}><span className="bi-chevron-down"></span></div>

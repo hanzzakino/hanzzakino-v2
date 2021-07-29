@@ -2,7 +2,7 @@
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
   	-moz-backdrop-filter: blur(8px);
-	background: rgba(32,38,50,0.95);
+	background: rgba(7,9,12,0.95);
 }
 .H-NvToggle {
 	background: transparent;
@@ -27,39 +27,34 @@
 }
 
 
-/* Navbar Animatinon*/
-@keyframes navCol1 {
-	from{
-		transform: translateX(-100px);
-	}
-	to {
-		transform: unset;
-	}
-}
+/* Navbar Content w/ Animatinon*/
 .navCol1 {
 	position: relative;
 	right: 0px;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	animation: navCol1;
+	animation: hz-slideToRight;
 	animation-duration: 0.5s;
 	animation-timing-function: ease;
-}
-@keyframes navCol2 {
-	from{
-		transform: translateX(100px);
-	}
-	to {
-		transform: unset;
-	}
 }
 .navCol2 {
 	position: relative;
 	left: 0px;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	animation: navCol2;
+	animation: hz-slideToLeft;
 	animation-duration: 0.5s;
 	animation-timing-function: ease;
+}
+@media (max-width: 600px) {
+	.navCol2 {
+	position: relative;
+	left: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	animation: hz-slideToRight;
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+}
 }
 /* Navbar Animatinon*/
