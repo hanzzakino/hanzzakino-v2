@@ -7,7 +7,7 @@ html {
 }
 body {
   	margin: 0;
- 	 font-family:  'Roboto', 'Arial', sans-serif;
+ 	font-family:  'Roboto', 'Arial', sans-serif;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	background-color: rgb(14,16,19);
@@ -93,6 +93,22 @@ code {
 	display: flex;
     flex-direction: column;
 }
+.hz-navbar-logo {
+	position: relative;
+	top: 3px;
+	height: 20px;
+	width: 20px;
+	padding-right: 10px;
+	transition: 0.5s;
+}
+.hz-navbar-logo-topped {
+	position: relative;
+	top: 3px;
+	height: 25px;
+	width: 25px;
+	padding-right: 10px;
+	transition: 0.5s;
+}
 .hz-navbar-brand {
 	font-size: 1.25rem;
 	color: rgb(230, 240, 255);
@@ -149,25 +165,43 @@ code {
 	transform: rotateX(0deg);
 	transition: 0.6s;
 }
-.hz-navbar-contactme {
+.hz-navbar-agroup {
+	display: flex;
+	flex-direction: row;
+	z-index: 2;
+	width: fit-content;
+	right: 75px;
+	position: fixed;
+}
+.hz-navbar-agroup-link {
+	font-family: "Roboto light";
+	width: 85px;
+	flex: 50%;
+	text-align: center;
+	margin: 0px 3px 0px 3px;
+	padding-top: 14px;
+	height: 31px;
 	text-decoration: none;
 	color: rgb(230, 240, 255);
 	font-size: 1rem;
-	position: fixed; /* Stay in place */
-	margin-top: 15px;
-	right: 90px;
-	z-index: 2;
 }
-.hz-navbar-resume {
+.hz-navbar-agroup-link-scrolled {
+	overflow: hidden;
+	font-family: "Roboto light";
+	width: 20px;
+	flex: 50%;
+	text-align: center;
+	margin: 0px 25px 0px 5px;
+	padding-top: 14px;
+	height: 20px;
 	text-decoration: none;
 	color: rgb(230, 240, 255);
 	font-size: 1rem;
-	position: fixed; /* Stay in place */
-	margin-top: 15px;
-	right: 185px;
-	z-index: 2;
+	transition: 0.8s;
 }
-
+.hz-navbar-agroup-link-scrolled span {
+	visibility: hidden;
+}
 /* if width less than 600px */
 @media (max-width: 600px) {
   .hz-navbar-collapse {
@@ -182,17 +216,17 @@ code {
 	.hz-navbar-toggle {
 		right: 5px;
 	}
-	.hz-navbar-contactme {
-		width: 20px;
-		height: 20px;
-		overflow: hidden;
-		right: 50px;
+	.hz-navbar-agroup {
+		right: 45px;
 	}
-	.hz-navbar-resume {
-		width: 20px;
-		height: 20px;
-		overflow: hidden;
-		right: 90px;
+	.hz-navbar-agroup-link  {
+		margin: 0px 1px 0px 1px;
+		padding-top: 16px;
+		width: 70px;
+		font-size: 0.8rem;
+	}
+	.hz-navbar-agroup-link-scrolled  {
+		margin: 0px 20px 0px 5px;
 	}
 }
 /* NAV */

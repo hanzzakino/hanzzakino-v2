@@ -16,6 +16,8 @@ class MainView extends React.Component {
 
   render() {
 
+    document.title = "Hanz Aquino";
+
     //this must not return full html src
     return (
       <div className="MainView">

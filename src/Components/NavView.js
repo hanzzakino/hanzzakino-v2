@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './NavView.css';
+import hzLogo from '../Assets/img/logo/hz-logo (2).svg';
 
 class NavView extends React.Component {
 
@@ -125,11 +126,19 @@ class NavView extends React.Component {
         <div className="hz-row-unresponsive">
         
           <div className="hz-column">
-            <a href="#home" className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}>{this.state.myName}</a>
+            <a href="#home" className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}><img className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-logo-topped":"hz-navbar-logo"} src={hzLogo} alt="Hanz Aquino Brang Logo" />{this.state.myName}</a>
           </div>
           <div className="hz-column">
-          <a href="#contactme" className="hz-navbar-contactme"><i className="bi-telephone" /> Contact</a>
-          <a href="#resume" className="hz-navbar-resume"><i className="bi-person" /> &nbsp;Resume</a>
+
+
+          <div className="hz-navbar-agroup">
+            <a href="#resume" className={this.state.onPageTop||this.state.toggledDown ? "hz-navbar-agroup-link":"hz-navbar-agroup-link-scrolled"}><i className="bi-file-earmark-text" /><span>&nbsp;Resume</span></a>
+            <a href="#contactme" className={this.state.onPageTop||this.state.toggledDown ? "hz-navbar-agroup-link":"hz-navbar-agroup-link-scrolled"}><i className="bi-telephone" /><span>&nbsp;Contact</span></a>
+          </div>
+
+          
+
+
           <button className="hz-navbar-toggle H-NvToggle" onClick={this.toggleCliked}>
             <span>
               <div className={this.state.toggledDown ? "hz-navbar-chevron-animated":"hz-navbar-chevron"}><span className="bi-chevron-down"></span></div>
