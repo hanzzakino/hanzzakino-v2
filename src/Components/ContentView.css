@@ -8,7 +8,7 @@
 
 .H-CtnSlogan {
 	color: rgb(250,80,80);
-	font-size: 20px;
+	font-size: 3rem;
 }
 
 .hz-cv-scrolldowncehvron {
@@ -22,14 +22,18 @@
 	transition: 0.2s;
 }
 
+.H-Ctn-Scrolldowntext {
+	position: absolute;
+	top: 80vh;
+	right: calc(50% - 44px);
+}
+
 
 /* About Me Image */
 .H-CtnImgMe-hid {
-	visibility: hidden;
-	transform: translateX(-100px);
+	transform: translateX(-50px);
 }
 .H-CtnImgMe-shw {
-	visibility: visible;
 	transform: unset;
 	transition: 1s;
 }
@@ -41,12 +45,17 @@
 .H-CtnMSlogan-hid {
 	visibility: hidden;
 	transform: translateY(100px);
-	font-size: 20px;
+	font-family: "Roboto";
+	font-weight: bolder;
+	font-size: 3rem;
 }
 .H-CtnMSlogan-shw {
-	font-size: 20px;
+	font-size: 3rem;
+	font-family: "Roboto";
+	font-weight: bolder;
 	visibility: visible;
 	transform: unset;
 	transition: 1.5s;
 }
+
 /******************/

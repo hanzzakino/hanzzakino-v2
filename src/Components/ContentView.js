@@ -12,6 +12,8 @@ class ContentView extends React.Component {
       myName : "Hanz Aquino",
       myFullName : "Hanz Christian C. Aquino",
       activeDiv : "",
+      scrollTopPX: 0,
+      scrollTopPT: 0,
     };
     this.Footer = this.Footer(this);
     this.Header = this.Header(this);
@@ -62,15 +64,17 @@ class ContentView extends React.Component {
               <div className="hz-column" align="center" >
                 <InView rootMargin='-50px 0px' triggerOnce>
                   {({ inView, ref, entry }) => (
-                    <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  >A&nbsp;&nbsp;&nbsp;C R E A T I V E&nbsp;&nbsp;&nbsp;H E <span className="H-CtnSlogan">A R T .</span></p>
+                    <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  >A<br />C R E A T I V E<br />H E <span className="H-CtnSlogan">A R T .</span></p>
                   )}
                 </InView>
+                
+                <p className="H-Ctn-Scrolldowntext">Scroll down</p>
               </div>
+
           </div>
       </div>
     );
   }
-
   Content(){
     return(
     <div>
@@ -78,32 +82,37 @@ class ContentView extends React.Component {
       <div className="hz-row" align="center">
         <div className="hz-column">
           <br />
-            <button onClick={() => {
+            <button className="hz-transparent" onClick={() => {
               const content1 = document.getElementById("content-1");
               if(content1)content1.scrollIntoView({ behavior: 'smooth' , block: "start"});
             }} 
-            className="hz-transparent"><span className="bi-chevron-down hz-cv-scrolldowncehvron"></span></button>
+            ><span className="bi-chevron-down hz-cv-scrolldowncehvron"></span></button>
 
         </div>
       </div>
-       <br /> <br />
+      <br /> <br />
 
-       
+      <div  id="content-1">
+      <br /><br /><br /><br />
+      {this.AboutMe}
+      <br /><br />
+      </div>
 
-      <div className="hz-container" id="content-1">
+      <div className="hz-container">
         <br /> <br /><br />
-        <div className="hz-row">
-          <div className="hz-column">
 
-            <div className="hz-row-unresponsive hz-card">
-              <div className="hz-column-fit">
-                <p style={{fontSize: "2.45rem",color: "rgb(250,80,80)", margin: "0.6875rem  0.3125rem 0px 0px"}}>Art</p>
-              </div>
-              <div className="hz-column-fit">
-                <p style={{fontFamily: "Roboto light", fontSize: "1rem"}}>of</p>
-                <p style={{marginTop: "-1.2rem"}}>Programming</p>
-              </div>
-            </div> 
+        <div className="hz-row-unresponsive">
+          <div className="hz-column-fit">
+
+            <div class="hz-line-ci">
+              <div class="hz-circle"></div>
+              <div class="hz-line"></div>
+            </div>
+
+          </div>
+          <div className="hz-column">
+            <h2 className="hz-content-programminng-title">Programming</h2>
+             
             
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet erat convallis, ultricies diam ultrices, lacinia purus. In dictum lectus eu massa interdum tempor. Curabitur dictum rhoncus ligula eu vehicula. Sed fringilla blandit lorem nec scelerisque. Pellentesque malesuada ipsum in orci lobortis, et ullamcorper quam interdum. Fusce volutpat, mauris et convallis maximus, odio massa interdum dui, ut tempus tellus arcu ut velit. Aenean placerat et purus id semper. Ut interdum eleifend pellentesque. Aenean ac malesuada augue. Mauris tempus ex vitae ante interdum, id sodales ipsum congue.
@@ -118,11 +127,11 @@ class ContentView extends React.Component {
             </p>
           </div>
         </div>
+
+
       </div>
     </div>);
   }
-
-
   AboutMe(){
     var hFbLogo = {
       color: "#1877f2",
@@ -146,8 +155,8 @@ class ContentView extends React.Component {
         <div className="hz-row">
           <div className="hz-column">
             <div className="hz-row hz-fullcentered">
-              <div className="hz-column">
-                <InView rootMargin='-100px 0px'>
+              <div className="hz-column-fit">
+                <InView rootMargin='-100px 0px' triggerOnce="true">
                   {({ inView, ref, entry }) => (
                     <div ref={ref}>
                       <span><img className={inView ? "H-CtnImgMe-shw":"H-CtnImgMe-hid"} src={myImage} width="150" alt="me"/></span>
@@ -156,53 +165,72 @@ class ContentView extends React.Component {
                   </InView>
               </div>
               <div className="hz-column">
-                <p>
-                  <b>{this.state.myFullName}</b>
-                  <br />
-                  <span style={hCourse}>
-                  BS in Computer Engineering
-                  <br />
-                  <i >Creator</i>
-                  <br />
-                  <a href="https://facebook.com/hanzz.akino" ><i style={hFbLogo} className="bi-facebook"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                  <a className="" href="https://twitter.com/HanzzAquino" ><i style={hTwLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                  <a href="https://github.com/hanzzakino" ><i style={hGhLogo} className="bi-github"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                  <a href="mailto:emperornezl50@gmail.com" ><i style={hMlLogo} className="bi-envelope-fill"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                  </span>
-                </p>
+
+                <InView rootMargin='0px 0px' triggerOnce="true">
+                  {({ inView, ref, entry }) => (
+                    <p ref={ref} className={inView ? "hz-content-aboutme-nametag":"hz-content-aboutme-nametag-hidden"}>
+                      <b>{this.state.myFullName} </b>
+                      <br />
+                      <span style={hCourse}>
+                      BS in Computer Engineering
+                      <br />
+                      <i >Creator</i>
+                      <br />
+                      <a href="https://facebook.com/hanzz.akino" ><i style={hFbLogo} className="bi-facebook"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a className="" href="https://twitter.com/HanzzAquino" ><i style={hTwLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a href="https://github.com/hanzzakino" ><i style={hGhLogo} className="bi-github"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a href="mailto:emperornezl50@gmail.com" ><i style={hMlLogo} className="bi-envelope-fill"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      </span>
+                    </p>
+                  )}
+                </InView>
+
               </div>
             </div>
             <br />
           </div>
 
-          <div className="hz-column">
-            <span>
-              <span><h2>Hi, I'm Hanz</h2></span>
-              <br />
-              <span>
-                I'm  a Computer Engineering student who enjoys converting ideas and creativity into a reliable, convenient, and user-friendly Software that can be utilized to aid your productivity.
-              </span>
-              <br /><br />
-            </span>
-          </div>
+          <InView rootMargin='0px 0px' triggerOnce="true">
+            {({ inView, ref, entry }) => (  
+              <div  ref={ref} className={inView ? "hz-column hz-slidein":"hz-column hz-slidein-hidden"}>
+                <span>
+                  <span><h2>Hi, I'm Hanz</h2></span>
+                  <br />
+                  <span>
+                    I'm  a Computer Engineering student who enjoys converting ideas and creativity into a reliable, convenient, and user-friendly Software that can be utilized to aid your productivity.
+                  </span>
+                  <br /><br />
+                </span>
+              </div>  
+            )}
+          </InView>
+
         </div>
       </div>
     );
   }
   Footer(){
+    var hFLogo = {
+      color: "white",
+      opacity: "70%",
+    };
+
+
     return(
       <div className="hz-container">
 
-          <div className="hz-unresponsive">
+          <div className="hz-content-footer hz-light-text">
             <div className="hz-column" align="left">
-              <p> &#169; 2021</p>
+              <p>Copyright &#169; 2021 Hanz Aquino. All rights reserved.</p>
             </div>
 
             <div className="hz-column" align="right">
               <p>
-                By: &nbsp; {this.state.myName} &nbsp;
-                <i className="bi-heart-fill"></i>
-                &nbsp;
+              <a href="https://facebook.com/hanzz.akino" ><i style={hFLogo} className="bi-facebook"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+              <a className="" href="https://twitter.com/HanzzAquino" ><i style={hFLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+              <a href="https://github.com/hanzzakino" ><i style={hFLogo} className="bi-github"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+              <a href="mailto:emperornezl50@gmail.com" ><i style={hFLogo} className="bi-envelope-fill"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+              <i className="bi-heart-fill" style={hFLogo}></i>
               </p>
             </div>
           </div>
@@ -216,13 +244,12 @@ class ContentView extends React.Component {
   render() {
     return (
       <div>
+
         {this.Header}
+
         <div>
         {this.Content}
-        <br /><br /><br />
-        <br /><br /><br />
-        <br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+
         <div>
         <InView rootMargin='-200px 0px'>
           {({ inView, ref, entry }) => (
@@ -232,12 +259,15 @@ class ContentView extends React.Component {
           )}
         </InView>
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+
         <hr />
         </div>
-        {this.AboutMe}
+
+        <br />
+        
+        <br />
         {this.Footer}
+
       </div>
     );
   }

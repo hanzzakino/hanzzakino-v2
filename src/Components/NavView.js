@@ -46,6 +46,8 @@ class NavView extends React.Component {
 
   handleNavClick(event) {
     console.log(event.target.name);
+    
+    //close nav
     this.toggleCliked();
   }
 
@@ -126,7 +128,7 @@ class NavView extends React.Component {
         <div className="hz-row-unresponsive">
         
           <div className="hz-column">
-            <a href="#home" className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}><img className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-logo-topped":"hz-navbar-logo"} src={hzLogo} alt="Hanz Aquino Brang Logo" />{this.state.myName}</a>
+            <a href="#home" className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-brand-topped":"hz-navbar-brand"}><img className={this.state.onPageTop&&!this.state.toggledDown ? "hz-navbar-logo-topped":"hz-navbar-logo"} src={hzLogo} alt="Hanz Aquino Brand Logo" />{this.state.myName}</a>
           </div>
           <div className="hz-column">
 
@@ -159,6 +161,8 @@ class NavView extends React.Component {
               {navColumns2}
             </div>  
           </div>
+
+          
 
         </div>
 
