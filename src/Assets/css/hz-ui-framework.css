@@ -119,6 +119,10 @@ code {
 	padding-right: 10px;
 	transition: 0.5s;
 }
+.hz-navbar-item-title {
+	font-family: 'Inter', sans-serif;
+	font-weight: bolder;
+}
 .hz-navbar-brand {
 	font-size: 1.25rem;
 	color: rgb(230, 240, 255);
@@ -258,6 +262,12 @@ code {
 	color: rgb(180,180,180);
 	font-size: 0.9rem;
 }
+.hz-content-projects-title {
+	font-size: 3rem;
+	font-family: 'Roboto Mono', sans-serif;
+	font-weight: bolder;
+	margin-left: 40px;
+}
 .hz-content-programminng-title {
 	margin-top: -1rem;
 	margin-left: -2rem;
@@ -271,10 +281,18 @@ code {
 	color: rgba(135,255,200,1)
 }
 .hz-content-text {
-
+	font-family: 'Cantarell', sans-serif;
+	color: rgba(200,200,205,1)
 }
-
+.hz-content-intro-message {
+	font-family: 'Cantarell', sans-serif;
+	color: rgba(200,200,200,1)
+}
 @media (max-width: 600px) {
+	.hz-content-projects-title {
+		font-size: 2.7rem;
+		margin-left: 20px;
+	}
 	.hz-content-footer{
 		font-size: 0.7rem;
 	    flex-direction: column-reverse;
@@ -371,6 +389,30 @@ code {
 	height: 105%;
 	bottom: 0;
 }
+.hz-line-curved {
+	background-color: transparent;
+	border-width: 2px;
+	border-left-color: rgba(150,230,255,1);
+	border-top-color: white;
+	border-top-style: solid;
+	border-left-style: dotted; 
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+	border-radius: 100px 0px 0px 0px;
+	margin-top: 65px;
+	margin-left: 76px;
+	width: calc(10vw);
+	height: 95%;
+}
+.hz-line-curved-tip {
+	position: relative;
+	height: 10px;
+	width: 10px;
+	margin-top: 59px;
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 50%;
+}
 .hz-circle {
 	position: relative;	
 	height: 10px;
@@ -387,6 +429,10 @@ code {
 	bottom: 0;
 }
 @media (max-width: 600px) {
+	.hz-line-curved {
+		margin-left: 16px;
+		width: 20px;
+	}
 	.hz-line {
 		width: 1px;
 	}
@@ -401,11 +447,30 @@ code {
 		margin-right: 30px;
 	}
 }
+@media (max-width: 350px) {
+	.hz-line-curved {
+		height: 93%;
+	}
+}
 /* Shapes */
 
 
 
-
+/* test / samples */
+.hz-test-sample-image {
+	margin-right: 25px;
+	margin-left: -10px;
+	background-color: lightyellow;
+	border-radius: 5px;
+	width: 35vw;
+	height: 15vw;
+}
+@media (max-width: 800px) {
+	.hz-test-sample-image {
+		width: 70vw;
+		height: 30vw;
+	}
+}
 
 
 /* Development Layout Preview */
@@ -423,4 +488,5 @@ code {
 }
 .hz-row-unresponsive {
 	background-color: orange;
-}*/
+}
+*/

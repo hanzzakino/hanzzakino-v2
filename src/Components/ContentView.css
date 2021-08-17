@@ -41,9 +41,14 @@
 
 /* About Me Image */
 .H-CtnImgMe-hid {
+	border-radius: 50%;
+	border: 3px solid white;
 	transform: translateX(-50px);
 }
 .H-CtnImgMe-shw {
+	border-radius: 50%;
+	border: 3px solid white;
+	border-color: rgba(200,230,255,1);
 	transform: unset;
 	transition: 1s;
 }
@@ -53,8 +58,8 @@
 	margin: 0;
 	padding: 0;
 	margin-top: -10px;
-	font-size: 2rem;
-	font-family: "Caveat";
+	font-size: 1.5rem;
+	font-family: 'Roboto Mono', sans-serif;
 	background-color:  rgba(0,228,255,1);
 	background-image: linear-gradient(180deg,  rgba(0,228,255,1) 0%,  rgba(200,230,255,1) 100%);
 	background-size: 100%;
@@ -79,7 +84,9 @@
 	background-color: rgba(200,230,255,1);
   	background: linear-gradient(180deg, rgba(150,230,255,1) 0%, rgba(110,255,155,1) 50%, rgba(0,212,255,0) 100%);
 }
-
+.H-Ctn-line2 {
+	border-color: linear-gradient(180deg, rgba(150,230,255,1) 0%, rgba(110,255,155,1) 50%, rgba(0,212,255,0) 100%);
+}
 
 
 /* Header motto */

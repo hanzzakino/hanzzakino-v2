@@ -17,25 +17,25 @@ class NavView extends React.Component {
       scrollTopPX: 0,
       scrollTopPT: 0,
       Skills : {
-        "PROGRAMMING" : {
-          "WEB": "#web",
-          "DESKTOP": "#desktop",
-          "ALGORITHMS": "#mathnalgo",
+        "Programming" : {
+          "Web": "#web",
+          "Desktop": "#desktop",
+          "Algorithms": "#mathnalgo",
         },
-        "COMPUTER GRAPHICS" : {
-          "2D ARTS": "#2d",
-          "3D ARTS": "#3d",
-          "DESIGNS": "#design",
+        "Computer Graphics" : {
+          "2D Arts": "#2d",
+          "3D Arts": "#3d",
+          "Designs": "#design",
         },
-        "MATHEMATICS" : {
-          "PHYSICS": "#physics",
-          "GEOMETRY": "#geometry",
-          "MATH": "#math",
+        "Mathematics" : {
+          "Physics": "#physics",
+          "Geometry": "#geometry",
+          "Math": "#math",
         },
-        "ENGINEERING" : {
-          "CIRCUIT DESIGN": "#circuits",
-          "LOGIC DESIGN" : "#logic",
-          "RESEARCH": "#research",
+        "Engineering" : {
+          "Circuit Designs": "#circuits",
+          "Logic Designs" : "#logic",
+          "Research": "#research",
         },
       }
     };
@@ -102,9 +102,9 @@ class NavView extends React.Component {
 
     for(var a in this.state.Skills){
       navItems = [];
-      navItems.push(<p key={a+"_a"} className="H-NvLink-head">{a}</p>);
+      navItems.push(<p key={a+"_a"} className="H-NvLink-head hz-navbar-item-title">{a}</p>);
       for(var b in this.state.Skills[a]){
-        navItems.push(<a key={b+"_b"} name={b} onClick={this.handleNavClick} className="hz-nvlink" href={this.state.Skills[a][b]}><span key={b+"_c"} className="H-NvLink" >{b}</span></a>);
+        navItems.push(<a key={b+"_b"} name={b} onClick={this.handleNavClick} className="hz-nvlink hz-navbar-item" href={this.state.Skills[a][b]}><span key={b+"_c"} className="H-NvLink" >{b}</span></a>);
       }
       navGroup.push(<div key={a+"_d"}><div className="hz-navbar-list" key={a+"_e"}>{navItems}</div><hr style={{opacity : "10%"}} key={a+"_f"}></hr></div>);
     }
