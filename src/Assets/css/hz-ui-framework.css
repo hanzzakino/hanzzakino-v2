@@ -253,10 +253,10 @@ code {
 	margin-left: 30px;
 }
 .hz-content-footer{
-	font-family: "Roboto light";
-	opacity: 70%;
-	font-size: 0.9rem;
 	display: flex;
+	font-family: "Roboto light";
+	color: rgb(180,180,180);
+	font-size: 0.9rem;
 }
 .hz-content-programminng-title {
 	margin-top: -1rem;
