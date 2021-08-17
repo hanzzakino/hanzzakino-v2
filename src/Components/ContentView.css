@@ -7,8 +7,18 @@
 
 
 .H-CtnSlogan {
-	color: rgb(250,80,80);
-	font-size: 3rem;
+	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
+	font-size: 5rem;
+	background-color: rgba(200,230,255,1);
+  	background: linear-gradient(185deg, rgba(255,100,100,1) 0%, rgba(255,48,60,1) 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+@keyframes gradientswitch {
+
 }
 
 .hz-cv-scrolldowncehvron {
@@ -39,19 +49,50 @@
 }
 /******************/
 
+.H-Ctn-hitxt {
+	margin: 0;
+	padding: 0;
+	margin-top: -10px;
+	font-size: 2rem;
+	font-family: "Caveat";
+	background-color:  rgba(0,228,255,1);
+	background-image: linear-gradient(180deg,  rgba(0,228,255,1) 0%,  rgba(200,230,255,1) 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.H-Ctn-textgradient {
+	background-color: rgb(250,80,80);
+	background-image: linear-gradient(180deg, rgb(255,30,30) 0%, rgb(105,20,215) 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+.H-Ctn-circle1 {
+	border-color: rgba(150,230,255,1);
+}
+.H-Ctn-line1 {
+	background-color: rgba(200,230,255,1);
+  	background: linear-gradient(180deg, rgba(150,230,255,1) 0%, rgba(110,255,155,1) 50%, rgba(0,212,255,0) 100%);
+}
+
 
 
 /* Header motto */
 .H-CtnMSlogan-hid {
 	visibility: hidden;
-	transform: translateY(100px);
-	font-family: "Roboto";
+	transform: translateY(50vh);
+	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
 	font-weight: bolder;
-	font-size: 3rem;
+	font-size: 5rem;
 }
 .H-CtnMSlogan-shw {
-	font-size: 3rem;
-	font-family: "Roboto";
+	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
+	font-size: 5rem;
 	font-weight: bolder;
 	visibility: visible;
 	transform: unset;
@@ -59,3 +100,20 @@
 }
 
 /******************/
+
+@media (max-width: 600px) {
+	.H-Ctn-hitxt {
+		margin-top: 10px;
+	}
+	.H-CtnMSlogan-hid {
+		font-size: 3rem;
+	}
+	.H-CtnMSlogan-shw {
+		padding-top: 18vh;
+		font-size: 3rem;
+	}
+	.H-CtnSlogan {
+		margin-top: 18vh;
+		font-size: 3rem;
+	}
+}

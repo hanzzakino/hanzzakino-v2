@@ -48,6 +48,10 @@ code {
   	margin: 0;
   	padding: 0;
 }
+.hz-column-fit-height {
+  	height: fit-content;
+  	flex: 50%;
+}
 
 /* If screen width is less than 600px */
 @media (max-width: 770px) {
@@ -258,7 +262,18 @@ code {
 	margin-top: -1rem;
 	margin-left: -2rem;
 	font-size: 2.3rem;
+	font-family: 'Inter', sans-serif;
+	color: rgba(150,230,255,1);
 }
+.hz-content-programminng-web-title {
+	font-size: 1.7rem;
+	font-family: 'Roboto Mono', sans-serif;
+	color: rgba(135,255,200,1)
+}
+.hz-content-text {
+
+}
+
 @media (max-width: 600px) {
 	.hz-content-footer{
 		font-size: 0.7rem;
@@ -272,8 +287,8 @@ code {
 		margin-left: 0px;
 	}
 	.hz-content-programminng-title {
-		margin-top: -0.8rem;
-		margin-left: unset;
+		margin-top: -0.9rem;
+		margin-left: -0.7rem;
 		font-size: 2.3rem;
 	}
 }
@@ -353,7 +368,8 @@ code {
 	background-color: white;
 	margin-left: 6px;
 	width: 2px;
-	height: 300px;
+	height: 105%;
+	bottom: 0;
 }
 .hz-circle {
 	position: relative;	
@@ -367,12 +383,12 @@ code {
 	margin-top: 0px;
 	margin-left: 70px;
 	margin-right: 60px;
+	height: 100%;
+	bottom: 0;
 }
 @media (max-width: 600px) {
 	.hz-line {
 		width: 1px;
-		height: 1000px;
-
 	}
 	.hz-circle {
 		height: 10px;
@@ -392,8 +408,8 @@ code {
 
 
 
-/*debug*/
-.hz-row {
+/* Development Layout Preview */
+/*.hz-row {
 	background-color: yellow;
 }
 .hz-column {
@@ -402,6 +418,9 @@ code {
 .hz-column-fit {
 	background-color: violet;
 }
+.hz-column-fit-height {
+	background-color: skyblue;
+}
 .hz-row-unresponsive {
 	background-color: orange;
-}
+}*/
