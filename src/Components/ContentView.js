@@ -71,7 +71,7 @@ class ContentView extends React.Component {
               <div className="hz-column" align="center" >
                 <InView rootMargin='-50px 0px' triggerOnce>
                   {({ inView, ref, entry }) => (
-                    <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  >A<br /><span>C R E A T I V E</span><br />H E <span className="H-CtnSlogan">A R T .</span></p>
+                    <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  ><span className="H-CtnSlogan-creative"></span><br /><span className="H-CtnSlogan">H E</span> <span className="H-CtnSlogan2">A R T</span></p>
                   )}
                 </InView>
                 
@@ -254,7 +254,7 @@ class ContentView extends React.Component {
               <div  ref={ref} className={inView ? "hz-column-fit-height hz-slidein":"hz-column-fit-height hz-slidein-hidden"}>
                 <h2 className="H-Ctn-hitxt">Hi, I'm Hanz</h2>
                 <p className="hz-content-intro-message">
-                  I'm  a Computer Engineering student who enjoys converting ideas and creativity into a reliable, convenient, and user-friendly Software that can be utilized to aid your productivity.
+                  I'm  a Computer Engineering student and I put my Heart and Soul into converting ideas and creativity into a reliable, convenient, and user-friendly piece of technology that can help create a better functionality.
                 </p>
               </div>  
             )}

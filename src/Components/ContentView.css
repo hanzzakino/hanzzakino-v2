@@ -9,16 +9,20 @@
 .H-CtnSlogan {
 	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
 	font-size: 5rem;
-	background-color: rgba(200,230,255,1);
-  	background: linear-gradient(185deg, rgba(255,100,100,1) 0%, rgba(255,48,60,1) 100%);
-	background-size: 100%;
-	-webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color:  rgba(0,200,255,1);
+	-moz-text-stroke-width: 1px;
+	-moz-text-stroke-color:  rgba(0,200,255,1);
 }
-@keyframes gradientswitch {
-
+.H-CtnSlogan2 {
+	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
+	font-size: 5rem;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color:  rgba(0,200,255,1);
+	-moz-text-stroke-width: 1px;
+	-moz-text-stroke-color:  rgba(0,200,255,1);
 }
 
 .hz-cv-scrolldowncehvron {
@@ -87,7 +91,154 @@
 .H-Ctn-line2 {
 	border-color: linear-gradient(180deg, rgba(150,230,255,1) 0%, rgba(110,255,155,1) 50%, rgba(0,212,255,0) 100%);
 }
+.H-CtnSlogan-creative {
+	position: relative;
+	font-family: "Ubuntu";
+	color: white; 
+	font-size: 5.5rem;
+	animation: continuousslideup;
+	animation-delay: 2s;
+	animation-duration: 28s;
+	animation-iteration-count: infinite;
+}
+.H-CtnSlogan-creative:after {
+	content: "C R E A T I V E";
+	animation: continuousslideup;
+	animation-delay: 2s;
+	animation-duration: 28s;
+	animation-iteration-count: infinite;
+}
+@keyframes continuousslideup {
+	0% {
+		top: 30vh;
+		visibility: hidden;
+		color: transparent;
+		content: "C R E A T I V E";
+	}
+	5% {
+		top: 0vh;
+		visibility: visible;
+		color: white; 
+		content: "C R E A T I V E";
+	}
+	20% {
+		top: 0vh;
+		visibility: visible;
+		color: white; 
+		content: "C R E A T I V E";
+	}
+	25% {
+		top: -10vh;
+		visibility: hidden;
+		color: transparent; 
+		content: "C R E A T I V E";
+	}
+	26% {
+		top: 30vh;
+		visibility: hidden;
+		color: transparent;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: transparent;
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color: transparent;
+		content: "I N S P I R E D";
+	}
+	30% {
+		top: 0vh;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color:  rgba(0,200,255,1);
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color:  rgba(0,200,255,1);
+		visibility: visible;
+		color: transparent;
+		content: "I N S P I R E D";
+	}
+	45% {
+		top: 0vh;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color:  rgba(0,200,255,1);
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color:  rgba(0,200,255,1);
+		visibility: visible;
+		color: transparent; 
+		content: "I N S P I R E D";
+	}
+	50% {
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: transparent;
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color: transparent;
+		top: -10vh;
+		visibility: hidden;
+		color: transparent; 
+		content: "I N S P I R E D";
+	}
+	51% {
+		top: 30vh;
+		visibility: hidden;
+		color: transparent;
+		content: "C L E V E R";
+	}
+	55% {
+		top: 0vh;
+		visibility: visible;
+		color: white; 
+		content: "C L E V E R";
+	}
+	70% {
+		top: 0vh;
+		visibility: visible;
+		color: white; 
+		content: "C L E V E R";
+	}
+	75% {
+		top: -10vh;
+		visibility: hidden;
+		color: transparent; 
+		content: "C L E V E R";
+	}
+	76% {
+		top: 30vh;
+		visibility: hidden;
+		color: transparent;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: transparent;
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color: transparent;
+		content: "F R I E N D L Y";
+	}
+	80% {
+		top: 0vh;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color:  rgba(0,200,255,1);
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color:  rgba(0,200,255,1);
+		visibility: visible;
+		color: transparent;
+		content: "F R I E N D L Y";
+	}
+	95% {
+		top: 0vh;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color:  rgba(0,200,255,1);
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color:  rgba(0,200,255,1);
+		visibility: visible;
+		color: transparent; 
+		content: "F R I E N D L Y";
+	}
+	100% {
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: transparent;
+		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-color: transparent;
+		top: -10vh;
+		visibility: hidden;
+		color: transparent; 
+		content: "F R I E N D L Y";
+	}
 
+}
 
 /* Header motto */
 .H-CtnMSlogan-hid {
@@ -100,9 +251,11 @@
 .H-CtnMSlogan-shw {
 	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
 	font-size: 5rem;
+	padding-top: 12vh;
 	font-weight: bolder;
 	visibility: visible;
 	transform: unset;
+	transition-delay: 4s;
 	transition: 1.5s;
 }
 
@@ -122,5 +275,13 @@
 	.H-CtnSlogan {
 		margin-top: 18vh;
 		font-size: 3rem;
+	}
+	.H-CtnSlogan2 {
+		margin-top: 18vh;
+		font-size: 3rem;
+	}
+	.H-CtnSlogan-creative {
+	font-family: "Ubuntu";
+	font-size: 3.2rem
 	}
 }
