@@ -228,7 +228,7 @@ class ContentView extends React.Component {
                 <InView rootMargin='0px 0px' triggerOnce="true">
                   {({ inView, ref, entry }) => (
                     <p ref={ref} className={inView ? "hz-content-aboutme-nametag":"hz-content-aboutme-nametag-hidden"}>
-                      <b>{this.state.myFullName} </b>
+                      <b className="H-Ctn-aboutme-nametxt">{this.state.myFullName} </b>
                       <br />
                       <span style={hCourse}>
                       BS in Computer Engineering

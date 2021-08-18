@@ -10,18 +10,18 @@
 	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
 	font-size: 5rem;
 	color: transparent;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color:  rgba(0,200,255,1);
-	-moz-text-stroke-width: 1px;
+	-moz-text-stroke-width: 2px;
 	-moz-text-stroke-color:  rgba(0,200,255,1);
 }
 .H-CtnSlogan2 {
 	font-family: 'Ubuntu', 'Inter', 'Roboto', sans-serif;
 	font-size: 5rem;
 	color: white;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color:  rgba(0,200,255,1);
-	-moz-text-stroke-width: 1px;
+	-moz-text-stroke-width: 2px;
 	-moz-text-stroke-color:  rgba(0,200,255,1);
 }
 
@@ -39,8 +39,9 @@
 .H-Ctn-Scrolldowntext {
 	position: absolute;
 	top: 80vh;
-	right: calc(50% - 44px);
+	right: calc(50% - 42px);
 }
+
 
 
 /* About Me Image */
@@ -62,7 +63,7 @@
 	margin: 0;
 	padding: 0;
 	margin-top: -10px;
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	font-family: 'Roboto Mono', sans-serif;
 	background-color:  rgba(0,228,255,1);
 	background-image: linear-gradient(180deg,  rgba(0,228,255,1) 0%,  rgba(200,230,255,1) 100%);
@@ -71,6 +72,9 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+}
+.H-Ctn-aboutme-nametxt {
+	font-size: 1.5rem;
 }
 .H-Ctn-textgradient {
 	background-color: rgb(250,80,80);
@@ -137,17 +141,17 @@
 		top: 30vh;
 		visibility: hidden;
 		color: transparent;
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color: transparent;
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color: transparent;
 		content: "I N S P I R E D";
 	}
 	30% {
 		top: 0vh;
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color:  rgba(0,200,255,1);
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color:  rgba(0,200,255,1);
 		visibility: visible;
 		color: transparent;
@@ -155,18 +159,18 @@
 	}
 	45% {
 		top: 0vh;
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color:  rgba(0,200,255,1);
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color:  rgba(0,200,255,1);
 		visibility: visible;
 		color: transparent; 
 		content: "I N S P I R E D";
 	}
 	50% {
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color: transparent;
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color: transparent;
 		top: -10vh;
 		visibility: hidden;
@@ -201,17 +205,17 @@
 		top: 30vh;
 		visibility: hidden;
 		color: transparent;
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color: transparent;
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color: transparent;
 		content: "F R I E N D L Y";
 	}
 	80% {
 		top: 0vh;
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color:  rgba(0,200,255,1);
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color:  rgba(0,200,255,1);
 		visibility: visible;
 		color: transparent;
@@ -219,25 +223,24 @@
 	}
 	95% {
 		top: 0vh;
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color:  rgba(0,200,255,1);
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color:  rgba(0,200,255,1);
 		visibility: visible;
 		color: transparent; 
 		content: "F R I E N D L Y";
 	}
 	100% {
-		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-width: 2px;
 		-webkit-text-stroke-color: transparent;
-		-moz-text-stroke-width: 1px;
+		-moz-text-stroke-width: 2px;
 		-moz-text-stroke-color: transparent;
 		top: -10vh;
 		visibility: hidden;
 		color: transparent; 
 		content: "F R I E N D L Y";
 	}
-
 }
 
 /* Header motto */
@@ -261,9 +264,18 @@
 
 /******************/
 
+@media (max-width: 1200px) {
+	.H-Ctn-aboutme-nametxt {
+		font-size: 1.1rem;
+	}
+}
 @media (max-width: 600px) {
+	.H-Ctn-aboutme-nametxt {
+		font-size: 1rem;
+	}
 	.H-Ctn-hitxt {
 		margin-top: 10px;
+		font-size: 2rem;
 	}
 	.H-CtnMSlogan-hid {
 		font-size: 3rem;
@@ -281,7 +293,146 @@
 		font-size: 3rem;
 	}
 	.H-CtnSlogan-creative {
-	font-family: "Ubuntu";
-	font-size: 3.2rem
+		font-family: "Ubuntu";
+		font-size: 3.2rem
+	}
+	.H-CtnSlogan {
+		-webkit-text-stroke-width: 1px;
+		-moz-text-stroke-width: 1px;
+	}
+	.H-CtnSlogan2 {
+		-webkit-text-stroke-width: 1px;
+		-moz-text-stroke-width: 1px;
+	}
+
+	@keyframes continuousslideup {
+		0% {
+			top: 30vh;
+			visibility: hidden;
+			color: transparent;
+			content: "C R E A T I V E";
+		}
+		5% {
+			top: 0vh;
+			visibility: visible;
+			color: white; 
+			content: "C R E A T I V E";
+		}
+		20% {
+			top: 0vh;
+			visibility: visible;
+			color: white; 
+			content: "C R E A T I V E";
+		}
+		25% {
+			top: -10vh;
+			visibility: hidden;
+			color: transparent; 
+			content: "C R E A T I V E";
+		}
+		26% {
+			top: 30vh;
+			visibility: hidden;
+			color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: transparent;
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color: transparent;
+			content: "I N S P I R E D";
+		}
+		30% {
+			top: 0vh;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color:  rgba(0,200,255,1);
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color:  rgba(0,200,255,1);
+			visibility: visible;
+			color: transparent;
+			content: "I N S P I R E D";
+		}
+		45% {
+			top: 0vh;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color:  rgba(0,200,255,1);
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color:  rgba(0,200,255,1);
+			visibility: visible;
+			color: transparent; 
+			content: "I N S P I R E D";
+		}
+		50% {
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: transparent;
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color: transparent;
+			top: -10vh;
+			visibility: hidden;
+			color: transparent; 
+			content: "I N S P I R E D";
+		}
+		51% {
+			top: 30vh;
+			visibility: hidden;
+			color: transparent;
+			content: "C L E V E R";
+		}
+		55% {
+			top: 0vh;
+			visibility: visible;
+			color: white; 
+			content: "C L E V E R";
+		}
+		70% {
+			top: 0vh;
+			visibility: visible;
+			color: white; 
+			content: "C L E V E R";
+		}
+		75% {
+			top: -10vh;
+			visibility: hidden;
+			color: transparent; 
+			content: "C L E V E R";
+		}
+		76% {
+			top: 30vh;
+			visibility: hidden;
+			color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: transparent;
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color: transparent;
+			content: "F R I E N D L Y";
+		}
+		80% {
+			top: 0vh;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color:  rgba(0,200,255,1);
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color:  rgba(0,200,255,1);
+			visibility: visible;
+			color: transparent;
+			content: "F R I E N D L Y";
+		}
+		95% {
+			top: 0vh;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color:  rgba(0,200,255,1);
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color:  rgba(0,200,255,1);
+			visibility: visible;
+			color: transparent; 
+			content: "F R I E N D L Y";
+		}
+		100% {
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: transparent;
+			-moz-text-stroke-width: 1px;
+			-moz-text-stroke-color: transparent;
+			top: -10vh;
+			visibility: hidden;
+			color: transparent; 
+			content: "F R I E N D L Y";
+		}
 	}
 }
