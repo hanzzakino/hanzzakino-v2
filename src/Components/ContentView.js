@@ -252,9 +252,9 @@ class ContentView extends React.Component {
           <InView rootMargin='0px 0px' triggerOnce="true">
             {({ inView, ref, entry }) => (  
               <div  ref={ref} className={inView ? "hz-column-fit-height hz-slidein":"hz-column-fit-height hz-slidein-hidden"}>
-                <h2 className="H-Ctn-hitxt">Hi, I'm Hanz</h2>
+                <h2 className="H-Ctn-hitxt">Hi! I'm Hanz,</h2>
                 <p className="hz-content-intro-message">
-                  I'm  a Computer Engineering student and I put my Heart and Soul into converting ideas and creativity into a reliable, convenient, and user-friendly piece of technology that can help create a better functionality.
+                  I'm currently a Computer Engineering student and I put my Heart and Soul into converting ideas and creativity into a reliable, convenient, and user-friendly piece of technology that can help create a better functionality.
                 </p>
               </div>  
             )}
