@@ -134,8 +134,8 @@ class NavView extends React.Component {
 
 
           <div className="hz-navbar-agroup">
-            <a href="#resume" className={this.state.onPageTop||this.state.toggledDown ? "hz-navbar-agroup-link":"hz-navbar-agroup-link-scrolled"}><i className="bi-file-earmark-text" /><span>&nbsp;Resume</span></a>
-            <a href="#contactme" className={this.state.onPageTop||this.state.toggledDown ? "hz-navbar-agroup-link":"hz-navbar-agroup-link-scrolled"}><i className="bi-telephone" /><span>&nbsp;Contact</span></a>
+            <a href="#resume" className={this.state.onPageTop||this.state.toggledDown ? "hz-navbar-agroup-link hz-hover-underline":"hz-navbar-agroup-link-scrolled hz-hover-underline"}><i className="bi-file-earmark-text" /><span>&nbsp;Resume</span>&nbsp;</a>
+            <a href="#contactme" className={this.state.onPageTop||this.state.toggledDown ? "hz-navbar-agroup-link hz-hover-underline":"hz-navbar-agroup-link-scrolled hz-hover-underline"}><i className="bi-telephone" /><span>&nbsp;Contact</span>&nbsp;</a>
           </div>
 
           

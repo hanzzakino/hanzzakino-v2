@@ -209,6 +209,7 @@ code {
 	text-align: center;
 	margin: 0px 25px 0px 5px;
 	padding-top: 14px;
+	padding-bottom: 12px;
 	height: 20px;
 	text-decoration: none;
 	color: rgb(230, 240, 255);
@@ -430,6 +431,24 @@ code {
 	height: 100%;
 	bottom: 0;
 }
+.hz-hover-underline {
+	display: inline-block;
+	position: relative;
+}
+.hz-hover-underline:after {
+	width: 0;
+	content: "";
+	bottom: 0;
+	height: 2px;
+	background: #fff;
+	transition: 0.3s;
+	display: block;
+	position: absolute;
+}
+.hz-hover-underline:hover:after {
+	width: 100%;
+	left: 0;
+}
 @media (max-width: 600px) {
 	.hz-line-curved {
 		margin-left: 16px;
@@ -491,4 +510,6 @@ code {
 .hz-row-unresponsive {
 	background-color: orange;
 }
-*/
+span {
+	background-color: lightgreen;
+}*/
