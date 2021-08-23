@@ -235,10 +235,11 @@ class ContentView extends React.Component {
                       <br />
                       <i >Creator</i>
                       <br />
-                      <a href="https://facebook.com/hanzz.akino" ><i style={hFbLogo} className="bi-facebook"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                      <a className="" href="https://twitter.com/HanzzAquino" ><i style={hTwLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                      <a href="https://github.com/hanzzakino" ><i style={hGhLogo} className="bi-github"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                      <a href="mailto:emperornezl50@gmail.com" ><i style={hMlLogo} className="bi-envelope-fill"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <br />
+                      <a href="https://facebook.com/hanzz.akino" ><i style={hFbLogo} className="bi-facebook hz-content-soclinks"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a className="" href="https://twitter.com/HanzzAquino" ><i style={hTwLogo} className="bi-twitter hz-content-soclinks" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a href="https://github.com/hanzzakino" ><i style={hGhLogo} className="bi-github hz-content-soclinks"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a href="mailto:emperornezl50@gmail.com" ><i style={hMlLogo} className="bi-envelope-fill hz-content-soclinks"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
                       </span>
                     </p>
                   )}
