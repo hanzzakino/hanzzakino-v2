@@ -101,15 +101,13 @@
 	color: white; 
 	font-size: 5.5rem;
 	animation: continuousslideup;
-	animation-delay: 2s;
-	animation-duration: 28s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
 }
 .H-CtnSlogan-creative:after {
-	content: "C R E A T I V E";
+	content: " ";
 	animation: continuousslideup;
-	animation-delay: 2s;
-	animation-duration: 28s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
 }
 @keyframes continuousslideup {
@@ -258,8 +256,6 @@
 	font-weight: bolder;
 	visibility: visible;
 	transform: unset;
-	transition-delay: 4s;
-	transition: 1.5s;
 }
 
 /******************/
