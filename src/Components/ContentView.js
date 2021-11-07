@@ -66,7 +66,7 @@ class ContentView extends React.Component {
     };
     return(
       <div style={headerBackgroundStyle}>
-          
+
           <div className="hz-row hz-fullcentered">
               <div className="hz-column" align="center" >
                 <InView rootMargin='-50px 0px' triggerOnce>
@@ -74,7 +74,7 @@ class ContentView extends React.Component {
                     <p ref={ref} className={inView ? "H-CtnMSlogan-shw":"H-CtnMSlogan-hid"}  ><span className="H-CtnSlogan-creative"></span><br /><span className="H-CtnSlogan">H E</span> <span className="H-CtnSlogan2">A R T</span></p>
                   )}
                 </InView>
-                
+
                 <p className="H-Ctn-Scrolldowntext">Scroll down</p>
               </div>
 
@@ -112,10 +112,10 @@ class ContentView extends React.Component {
               <div className="hz-line-curved H-Ctn-line2"></div>      
           </div>
           <div className="hz-column-fit">
-            
+
             <div className="hz-line-curved-tip"></div>
-            
-      
+
+
           </div>
 
           <div className="hz-column-fit-height">
@@ -164,7 +164,7 @@ class ContentView extends React.Component {
             <p className="hz-content-text">
               Pellentesque ac elit et neque vestibulum luctus vel vitae mi. Donec sapien tellus, maximus eget egestas non, scelerisque eu metus. Proin aliquam nibh dictum nibh ultrices, non scelerisque sem dictum. Cras eget pretium lorem. Etiam blandit, lacus non consectetur venenatis, lorem magna placerat felis, eu aliquam nulla nisl ac tortor. Etiam id scelerisque nisi. Nam quis dolor quis justo suscipit suscipit. Curabitur laoreet tincidunt nisi sit amet ornare. Proin ut velit sit amet eros condimentum dignissim. In imperdiet felis et hendrerit convallis. Nullam dapibus massa pharetra elit porta dignissim. Maecenas a eleifend risus, vel commodo eros. Pellentesque dictum commodo erat, consequat sagittis velit euismod quis. Etiam finibus eu lectus eu aliquet. Morbi erat sem, rhoncus interdum rhoncus nec, sagittis ut lacus.
             </p>
-            
+
 
 
 
@@ -181,6 +181,25 @@ class ContentView extends React.Component {
             <br /> <br />
             Pellentesque ac elit et neque vestibulum luctus vel vitae mi. Donec sapien tellus, maximus eget egestas non, scelerisque eu metus. Proin aliquam nibh dictum nibh ultrices, non scelerisque sem dictum. Cras eget pretium lorem. Etiam blandit, lacus non consectetur venenatis, lorem magna placerat felis, eu aliquam nulla nisl ac tortor. Etiam id scelerisque nisi. Nam quis dolor quis justo suscipit suscipit. Curabitur laoreet tincidunt nisi sit amet ornare. Proin ut velit sit amet eros condimentum dignissim. In imperdiet felis et hendrerit convallis. Nullam dapibus massa pharetra elit porta dignissim. Maecenas a eleifend risus, vel commodo eros. Pellentesque dictum commodo erat, consequat sagittis velit euismod quis. Etiam finibus eu lectus eu aliquet. Morbi erat sem, rhoncus interdum rhoncus nec, sagittis ut lacus.
             </p>
+
+
+
+            
+
+            <h3 className="hz-content-programminng-web-title">Sample Apps</h3>
+
+            <button className="hz-content-programminng-web-appbutton" onClick={() => window.open("https://bankeralgo-hanzzakino.vercel.app")}>
+              <div className="hz-row">
+                 <div className="hz-test-sample-image"></div>
+              </div>
+              <div className="hz-row">
+                 <p className="hz-content-text" id="web">Banker's Algorithm</p>
+              </div>
+            </button>
+
+
+
+
 
 
           </div>
@@ -237,7 +256,7 @@ class ContentView extends React.Component {
                       <br />
                       <br />
                       <a href="https://facebook.com/hanzz.akino" ><i style={hFbLogo} className="bi-facebook hz-content-soclinks"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-                      <a className="" href="https://twitter.com/HanzzAquino" ><i style={hTwLogo} className="bi-twitter hz-content-soclinks" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+                      <a className="" href="https://twitter.com/hanzzakino" ><i style={hTwLogo} className="bi-twitter hz-content-soclinks" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
                       <a href="https://github.com/hanzzakino" ><i style={hGhLogo} className="bi-github hz-content-soclinks"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
                       <a href="mailto:emperornezl50@gmail.com" ><i style={hMlLogo} className="bi-envelope-fill hz-content-soclinks"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
                       </span>
@@ -283,7 +302,7 @@ class ContentView extends React.Component {
             <div className="hz-column" align="right">
               <p>
               <a href="https://facebook.com/hanzz.akino" ><i style={hFLogo} className="bi-facebook"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
-              <a className="" href="https://twitter.com/HanzzAquino" ><i style={hFLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
+              <a className="" href="https://twitter.com/hanzzakino" ><i style={hFLogo} className="bi-twitter" ></i></a><span>&nbsp;&nbsp;&nbsp;</span>
               <a href="https://github.com/hanzzakino" ><i style={hFLogo} className="bi-github"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
               <a href="mailto:emperornezl50@gmail.com" ><i style={hFLogo} className="bi-envelope-fill"></i></a><span>&nbsp;&nbsp;&nbsp;</span>
               <i className="bi-heart-fill" style={hFLogo}></i>
@@ -318,7 +337,7 @@ class ContentView extends React.Component {
         </InView>
         </div>
 
-        
+
 
         <hr />
         </div>

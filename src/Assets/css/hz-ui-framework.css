@@ -1,6 +1,3 @@
-
-
-
 /* HTML */
 html {
 	font-size: 16px;
@@ -74,6 +71,7 @@ code {
 
 
 
+/* +++++++++++++++++++++++++++++++++++ HANZ PORTFOLIO APP +++++++++++++++++++++++++++++++++++ */
 
 /* NAV */
 .hz-navbar-view{
@@ -155,10 +153,10 @@ code {
 	color: rgb(220, 230, 235);
 	background-color: transparent;
 }
-.hz-nvlink:focus ,.hz-nvlink:active  {
-	text-decoration: none;
+.hz-nvlink:focus , .hz-nvlink:active , .hz-nvlink:hover {
+	text-decoration: underline;
 	margin: 2px;
-	color: rgb(220, 230, 235);
+	color: rgb(180, 210, 255);
 	background-color: transparent;
 }
 .hz-navbar-toggle {
@@ -300,6 +298,18 @@ code {
 	padding-right: 5px;
 	font-size: 1.1rem;
 }
+.hz-content-programminng-web-appbutton {
+	border: none;
+	padding-top: 10px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.2);
+}
+.hz-content-programminng-web-appbutton:hover {
+	background-color: rgba(255,255,255,0.3);
+}
+.hz-content-programminng-web-appbutton:active {
+	background-color: rgba(135,255,200,0.2);
+}
 @media (max-width: 600px) {
 	.hz-content-projects-title {
 		font-size: 2.7rem;
@@ -327,6 +337,9 @@ code {
 }
 /* CONTAINER */
 
+
+
+/* +++++++++++++++++++++++++++++++++++ HANZ PORTFOLIO APP +++++++++++++++++++++++++++++++++++ */
 
 
 

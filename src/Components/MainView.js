@@ -1,5 +1,4 @@
 import './MainView.css';
-
 import React from 'react';
 import NavView from './NavView';
 import ContentView from './ContentView';
